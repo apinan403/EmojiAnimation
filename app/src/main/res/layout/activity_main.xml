@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center">
+
+    <EditText
+        android:id="@+id/Edt_LikeAmountReact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="like reaction amount"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#0022CD"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.246"
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/Edt_LoveAmountReact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="love reaction amount"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#0022CD"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_LikeAmountReact"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Edt_LikeAmountReact"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_LikeAmountReact"
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/Edt_LaughAmountReact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="laugh reaction amount"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#0022CD"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_LoveAmountReact"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/Edt_LoveAmountReact"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_LoveAmountReact"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/Edt_AngryAmountReact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="angry reaction amount"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#0022CD"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_LaughAmountReact"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Edt_LaughAmountReact"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_LaughAmountReact"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/Button_SubmitAmountReact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_AngryAmountReact"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/Edt_AngryAmountReact"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_AngryAmountReact"
+        tools:ignore="HardcodedText" />
+
+    <FrameLayout
+        android:id="@+id/clone_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/imageView_ShowIc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:color/transparent"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorOnPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+<!--        android:background="?attr/colorOnPrimary"-->
+
+        <ImageButton
+            android:id="@+id/Button_IcLike"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_like"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/Button_IcLove"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_love"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/Button_IcLaugh"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_laugh"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/Button_IcAngry"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_angry"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
